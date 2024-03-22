@@ -1,0 +1,37 @@
+---
+title: "R markdown tutorial"
+author: "faho@itu.dk"
+date: "2024-03-19"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Plain text. Now we want to estimate the mean using the formula
+$\hat{\mu}=\frac{sum_{i=1}^nx_i}{n}$. We know all the values of our observations. Now we want to compute the estimate of the mean:
+$$\hat{\mu}=\frac{1+2+3}{3}=2$$
+
+If we want to align the computation, we can do like this:
+$$\begin{aligned}\hat{\mu}&=\frac{\sum{i=1}^nx_i}{n}\\
+&=\frac{1+2+3}{3}\\
+&=2\end{aligned}$$
+
+We can also compute the estimate of the mean in R:
+```{r}
+data <- c(1,2,3)
+mu_hat <- sum(data)/3
+print(mu_hat)
+```
+
+
+```{r echo=FALSE, fig.align="center",out.width="40%,out.height="40%"}
+knitr::include_graphics("chiefschamp.png")
+
+```
+
+
+
